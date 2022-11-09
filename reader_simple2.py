@@ -1,7 +1,7 @@
 # Reading csv files v0.6 - DictReader approach
 import csv
 
-keys = ['name', 'family', 'house', 'id']
+keys = ['Name', 'Family', 'House', 'Id']
 
 ''' First file open and printing '''
 #print("Print persons from list 1: ")
@@ -11,14 +11,14 @@ id_list1 = []
 with open("students_a.csv", "r", newline='') as file1: 
     persons1 = csv.DictReader(file1, fieldnames=keys)
     for person1 in persons1:
-        id_list1.append({   "name": person1['name'], 
-                            "family": person1['family'], 
-                            "house": person1['house'],
-                            "id": person1['id'],
+        id_list1.append({   "Name": person1['Name'], 
+                            "Family": person1['Family'], 
+                            "House": person1['House'],
+                            "Id": person1['Id'],
                         })
     
 
-print(id_list1)
+print(id_list1[0])
 
 
 
